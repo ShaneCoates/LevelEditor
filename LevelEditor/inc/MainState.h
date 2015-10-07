@@ -29,6 +29,8 @@ public:
 	void Update(double _dt);
 	void Draw();
 
+	void RefreshWindow();
+
 private:
 	GLFWwindow* m_window;
 	GameStateManager* m_gameStateManager;

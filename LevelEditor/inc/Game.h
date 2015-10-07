@@ -21,8 +21,17 @@ public:
 	//Main Game loop
 	void Run();
 
+	static Game* Instance();
+
+	GLFWwindow* GetWindow();
+
 protected:
 private:
+
+	bool m_fullscreen = false;
+	void ToggleFullscreen(bool _fullscreen, int _width = 1024, int _height = 768);
+
+	static Game* m_instance;
 
 	//Function to return DeltaTime
 	double GetDeltaTime();
@@ -38,6 +47,8 @@ private:
 	//Game State Manager
 	GameStateManager* m_gameStateManager;
 
+	MainState* m_mainState;
+	
 };
 
 #endif

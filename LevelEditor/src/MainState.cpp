@@ -4,8 +4,9 @@
 #include "Skybox.h"
 #include "FlyCamera.h"
 #include "aieutilities\Gizmos.h"
+#include "Game.h"
 void MainState::Init(GLFWwindow* _window, GameStateManager* _gameStateManager) {
-	m_window = _window;
+	m_window = Game::Instance()->GetWindow();
 	m_gameStateManager = _gameStateManager;
 	m_skybox = new Skybox();
 	m_camera = new FlyCamera(10.0f);
@@ -17,7 +18,7 @@ void MainState::Init(GLFWwindow* _window, GameStateManager* _gameStateManager) {
 void MainState::Update(double _dt) {
 	m_camera->Update(_dt);
 	double xpos, ypos;
-	glfwGetCursorPos(glfwGetCurrentContext(), &xpos, &ypos);
+	glfwGetCursorPos(m_window, &xpos, &ypos);
 	glm::vec3 pos = m_camera->PickAgainstPlane((float)xpos, (float)ypos, glm::vec4(0, 1, 0, 0));
 	mousePos = glm::vec2((int)pos.x, (int)pos.z);
 	
@@ -28,9 +29,6 @@ void MainState::Draw()
 	Gizmos::clear();
 
 	m_skybox->Draw(m_camera);
-
-	
-
 
 	glm::vec4 colour = glm::vec4(1, 1, 1, 1);
 	glm::vec3 pos1 = glm::vec3(0, 0, 0);
@@ -75,4 +73,8 @@ void MainState::Draw()
 
 	Gizmos::draw(m_camera->GetProjectionView());
 }
-
+void MainState::RefreshWindow()
+{
+	m_window = Game::Instance()->GetWindow();
+	m_camera->SetInputWindow(m_window);
+}
