@@ -29,11 +29,19 @@ void MainState::Draw()
 
 	m_skybox->Draw(m_camera);
 
+	
+
+
 	glm::vec4 colour = glm::vec4(1, 1, 1, 1);
 	glm::vec3 pos1 = glm::vec3(0, 0, 0);
 	glm::vec3 pos2 = glm::vec3(0, 0, 0.95f);
 	glm::vec3 pos3 = glm::vec3(0.95f, 0, 0);
 	glm::vec3 pos4 = glm::vec3(0.95f, 0, 0.95f);
+
+
+	Gizmos::addLine(pos1, glm::vec3(5, 0, 0), glm::vec4(0, 0, 1, 1));
+	Gizmos::addLine(pos1, glm::vec3(0, 5, 0), glm::vec4(1, 0, 0, 1));
+	Gizmos::addLine(pos1, glm::vec3(0, 0, 5), glm::vec4(0, 1, 0, 1));
 
 	for (int x = 0; x < 10; x++)
 	{
