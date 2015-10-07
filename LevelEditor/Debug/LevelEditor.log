@@ -1,0 +1,100 @@
+﻿Build started 10/7/2015 8:17:07 PM.
+     1>Project "C:\Users\Shane\Desktop\LevelEditor\LevelEditor\LevelEditor.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Assignment2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\stb-master" /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\glm /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\glfw\include /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\RakNet /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\src /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\inc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D GLM_SWIZZLE /D GLM_FORCE_PURE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\Camera.cpp src\FlyCamera.cpp src\Game.cpp src\GameStateManager.cpp src\Gizmos.cpp src\imgui.cpp src\imgui_impl_glfw_gl3.cpp src\main.cpp src\MainState.cpp src\NetworkManager.cpp src\ObjectOBJ.cpp src\ShaderLoader.cpp src\Skybox.cpp
+         Skybox.cpp
+         ShaderLoader.cpp
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\shaderloader.cpp(64): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+         ObjectOBJ.cpp
+         NetworkManager.cpp
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(86): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(90): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(99): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(170): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(173): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(184): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(213): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(228): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(242): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(261): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(274): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\networkmanager.cpp(277): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programs\microsoft visual studio 12.0\vc\include\stdio.h(356) : see declaration of 'sprintf'
+         MainState.cpp
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\mainstate.cpp(40): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\mainstate.cpp(41): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\mainstate.cpp(56): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\mainstate.cpp(58): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         main.cpp
+         imgui_impl_glfw_gl3.cpp
+         imgui.cpp
+         Gizmos.cpp
+         GameStateManager.cpp
+         Game.cpp
+     1>c:\users\shane\desktop\leveleditor\leveleditor\src\game.cpp(16): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         FlyCamera.cpp
+         Camera.cpp
+         Generating Code...
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\stb-master" /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\glm /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\glfw\include /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep\RakNet /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\src /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\dep /IC:\Users\Shane\Desktop\LevelEditor\LevelEditor\inc /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D GLM_SWIZZLE /D GLM_FORCE_PURE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt src\gl_core_4_4.c
+         gl_core_4_4.c
+       Link:
+         D:\Programs\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\LevelEditor.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Shane\Desktop\LevelEditor\LevelEditor\lib opengl32.lib glfw3.lib XINPUT9_1_0.LIB ws2_32.lib RakNet_d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\LevelEditor.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\LevelEditor.lib" /MACHINE:X86 Debug\Camera.obj
+         Debug\FlyCamera.obj
+         Debug\Game.obj
+         Debug\GameStateManager.obj
+         Debug\Gizmos.obj
+         Debug\gl_core_4_4.obj
+         Debug\imgui.obj
+         Debug\imgui_impl_glfw_gl3.obj
+         Debug\main.obj
+         Debug\MainState.obj
+         Debug\NetworkManager.obj
+         Debug\ObjectOBJ.obj
+         Debug\ShaderLoader.obj
+         Debug\Skybox.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>RakNet_d.lib(BitStream.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(BitStream.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(CCRakNetSlidingWindow.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(CCRakNetSlidingWindow.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(DR_SHA1.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(DR_SHA1.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(DS_ByteQueue.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(DS_ByteQueue.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(DS_HuffmanEncodingTree.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(DS_HuffmanEncodingTree.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(GetTime.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(GetTime.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(Itoa.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(Itoa.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(LocklessTypes.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(LocklessTypes.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(PluginInterface2.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(PluginInterface2.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakMemoryOverride.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakMemoryOverride.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakNetSocket2.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakNetSocket2.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakNetTypes.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakNetTypes.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakPeer.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakPeer.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakSleep.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakSleep.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakString.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakString.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(RakThread.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(RakThread.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(Rand.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(Rand.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(ReliabilityLayer.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(ReliabilityLayer.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(SignaledEvent.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(SignaledEvent.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(SimpleMutex.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(SimpleMutex.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(SocketLayer.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(SocketLayer.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(StringCompressor.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(StringCompressor.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(StringTable.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(StringTable.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(SuperFastHash.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(SuperFastHash.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(TCPInterface.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(TCPInterface.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+     1>RakNet_d.lib(WSAStartupSingleton.obj) : warning LNK4099: PDB 'raknet_vs2008_libstatic_debug_win32.pdb' was not found with 'RakNet_d.lib(WSAStartupSingleton.obj)' or at 'C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\raknet_vs2008_libstatic_debug_win32.pdb'; linking object as if no debug info
+         LevelEditor.vcxproj -> C:\Users\Shane\Desktop\LevelEditor\LevelEditor\bin\Debug\LevelEditor.exe
+     1>Done Building Project "C:\Users\Shane\Desktop\LevelEditor\LevelEditor\LevelEditor.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:35.67
