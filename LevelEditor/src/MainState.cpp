@@ -43,25 +43,26 @@ void MainState::Draw()
 
 	for (int x = 0; x < 10; x++)
 	{
-		pos1.x  = 0 + x;
-		pos2.x  = 0 + x;
-		pos3.x  = 0.95f + x;
-		pos4.x  = 0.95f + x;
+		pos1.x = 0.05f + x;
+		pos2.x = 0.05f + x;
+		pos3.x = 0.95f + x;
+		pos4.x = 0.95f + x;
 		for (int z = 0; z < 10; z++)
 		{
 			if (mousePos.x == x && mousePos.y == z)
 			{
 				colour.r = 0;
 				colour.b = 0;
+				Gizmos::addAABBFilled(glm::vec3(x + 0.5f, 0.5f, z + 0.5f), glm::vec3(0.5f, 0.5f, 0.5f), glm::vec4(0.3f));
 			}
 			else
 			{
 				colour.r = 1;
 				colour.b = 1;
 			}
-			pos1.z = 0 + z;
+			pos1.z = 0.05f + z;
 			pos2.z = 0.95f + z;
-			pos3.z = 0 + z;
+			pos3.z = 0.05f + z;
 			pos4.z = 0.95f + z;
 
 			Gizmos::addLine(pos1, pos2, colour);
