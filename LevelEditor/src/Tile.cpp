@@ -17,8 +17,8 @@ Tile::~Tile()
 }
 void Tile::Update(double _dt)
 {
-	m_colour.r = (m_hover) ? 1 : 0;
-	m_colour.b = (m_hover) ? 1 : 0;
+	m_colour.r = (m_hover) ? 0 : 1;
+	m_colour.b = (m_hover) ? 0 : 1;
 
 }
 void Tile::Draw()

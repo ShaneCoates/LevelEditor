@@ -59,6 +59,10 @@ void MainState::Draw()
 	glClearColor(1, 1, 1, 1);
 	Gizmos::clear();
 
+	Gizmos::addLine(glm::vec3(0), glm::vec3(5, 0, 0), glm::vec4(0, 0, 1, 1));
+	Gizmos::addLine(glm::vec3(0), glm::vec3(0, 5, 0), glm::vec4(1, 0, 0, 1));
+	Gizmos::addLine(glm::vec3(0), glm::vec3(0, 0, 5), glm::vec4(0, 1, 0, 1));
+
 	m_skybox->Draw(m_camera);
 
 	for (auto tile : m_tiles)
