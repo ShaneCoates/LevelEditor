@@ -41,7 +41,7 @@ void FlyCamera::HandleKeyboardInput(double dt) {
 	}
 }
 void FlyCamera::HandleMouseInput(double dt) {
-	if (glfwGetMouseButton(m_window, GLFW_MOUSE_BUTTON_2) == GLFW_PRESS) {
+	if (glfwGetMouseButton(m_window, GLFW_MOUSE_BUTTON_3) == GLFW_PRESS) {
 		if (m_bViewButtonClicked == false) {
 			int width, height;
 			glfwGetFramebufferSize(m_window, &width, &height);

@@ -5,6 +5,9 @@
 #include "FlyCamera.h"
 #include "aieutilities\Gizmos.h"
 #include "Game.h"
+#include "Tile.h"
+#include "Cube.h"
+#include "imgui.h"
 void MainState::Init(GLFWwindow* _window, GameStateManager* _gameStateManager) {
 	m_window = Game::Instance()->GetWindow();
 	m_gameStateManager = _gameStateManager;
@@ -13,6 +16,10 @@ void MainState::Init(GLFWwindow* _window, GameStateManager* _gameStateManager) {
 	m_camera->SetInputWindow(m_window);
 	m_camera->SetPerspective(glm::pi<float>() * 0.25f, 16.0f / 9.0f, 0.1f, 1000.0f);
 	m_camera->SetLookAt(glm::vec3(4, 10, 14), glm::vec3(4, 0, 4), glm::vec3(0, 1, 0));
+	CreateTiles(10, 10);
+	m_newTiles[0] = 10;
+	m_newTiles[1] = 10;
+
 	Gizmos::create();
 }
 void MainState::Update(double _dt) {
@@ -21,7 +28,31 @@ void MainState::Update(double _dt) {
 	glfwGetCursorPos(m_window, &xpos, &ypos);
 	glm::vec3 pos = m_camera->PickAgainstPlane((float)xpos, (float)ypos, glm::vec4(0, 1, 0, 0));
 	mousePos = glm::vec2((int)pos.x, (int)pos.z);
-	
+	bool found = false;
+	for (auto tile : m_tiles)
+	{
+		tile->Update(_dt);
+		if (tile->ComparePos(mousePos))
+		{
+			tile->Hover();
+			if (glfwGetMouseButton(m_window, GLFW_MOUSE_BUTTON_1))
+			{
+				m_cubes.push_back(new Cube(mousePos));
+			}
+		}
+	}
+	for (auto cube : m_cubes)
+	{
+		cube->Update(_dt);
+		if (cube->ComparePos(mousePos))
+		{
+			if (glfwGetMouseButton(m_window, GLFW_MOUSE_BUTTON_2))
+			{
+				m_cubes.remove(cube);
+				break;
+			}
+		}
+	}
 }
 void MainState::Draw()
 {
@@ -30,52 +61,50 @@ void MainState::Draw()
 
 	m_skybox->Draw(m_camera);
 
-	glm::vec4 colour = glm::vec4(1, 1, 1, 1);
-	glm::vec3 pos1 = glm::vec3(0, 0, 0);
-	glm::vec3 pos2 = glm::vec3(0, 0, 0.95f);
-	glm::vec3 pos3 = glm::vec3(0.95f, 0, 0);
-	glm::vec3 pos4 = glm::vec3(0.95f, 0, 0.95f);
-
-
-	Gizmos::addLine(pos1, glm::vec3(5, 0, 0), glm::vec4(0, 0, 1, 1));
-	Gizmos::addLine(pos1, glm::vec3(0, 5, 0), glm::vec4(1, 0, 0, 1));
-	Gizmos::addLine(pos1, glm::vec3(0, 0, 5), glm::vec4(0, 1, 0, 1));
-
-	for (int x = 0; x < 10; x++)
+	for (auto tile : m_tiles)
 	{
-		pos1.x = 0.05f + x;
-		pos2.x = 0.05f + x;
-		pos3.x = 0.95f + x;
-		pos4.x = 0.95f + x;
-		for (int z = 0; z < 10; z++)
-		{
-			if (mousePos.x == x && mousePos.y == z)
-			{
-				colour.r = 0;
-				colour.b = 0;
-				Gizmos::addAABBFilled(glm::vec3(x + 0.5f, 0.5f, z + 0.5f), glm::vec3(0.5f, 0.5f, 0.5f), glm::vec4(0.3f));
-			}
-			else
-			{
-				colour.r = 1;
-				colour.b = 1;
-			}
-			pos1.z = 0.05f + z;
-			pos2.z = 0.95f + z;
-			pos3.z = 0.05f + z;
-			pos4.z = 0.95f + z;
-
-			Gizmos::addLine(pos1, pos2, colour);
-			Gizmos::addLine(pos1, pos3, colour);
-			Gizmos::addLine(pos4, pos2, colour);
-			Gizmos::addLine(pos4, pos3, colour);
-		}
+		tile->Draw();
+	}
+	for (auto cube : m_cubes)
+	{
+		cube->Draw();
 	}
 
 	Gizmos::draw(m_camera->GetProjectionView());
+	MainState::DrawGUI();
+}
+
+void MainState::DrawGUI()
+{
+	if (ImGui::CollapsingHeader("New Map"))
+	{
+		ImGui::SliderInt2("Map Size", m_newTiles, 1, 100);
+		if (ImGui::Button("Create New Map"))
+		{
+			CreateTiles(m_newTiles);
+		}
+	}
+}
+
+void MainState::CreateTiles(int _size[2])
+{
+	CreateTiles(_size[0], _size[1]);
+}
+void MainState::CreateTiles(int _size1, int _size2)
+{
+	m_cubes.clear();
+	m_tiles.clear();
+	for (int x = 0; x < _size1; x++)
+	{
+		for (int z = 0; z < _size2; z++)
+		{
+			m_tiles.push_back(new Tile(glm::vec2(x, z)));
+		}
+	}
 }
 void MainState::RefreshWindow()
 {
 	m_window = Game::Instance()->GetWindow();
 	m_camera->SetInputWindow(m_window);
 }
+
